@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: black; */
+}
+.black{
+    background-color: black;
+height: 100vh;
+}
+.head {
+    text-align: center;
+    color: white;
+    padding: 2rem 0;
+    /* margin: 2rem 0; */
+    font-size: 2.2rem;
+}
+
+.frames {
+    width: 42rem;
+    height: 32rem;
+    background-image: url("img1.png");
+    position: relative;
+    left: 4rem;
+    background-size: 100% 100%;
+    box-shadow: 1px 2px 10px 5px blueviolet;
+    animation: slider 20s infinite linear;
+}
+
+@keyframes slider {
+    0% {
+        background-image: url("img4.png");
+        background-size: 100% 100%;
+    }
+
+    40% {
+        background-image: url("img1.png");
+        background-size: 100% 100%;
+    }
+
+    70% {
+        background-image: url("img3.webp");
+        background-size: 100% 100%;
+    }
+
+    100% {
+        background-image: url("img2.png");
+        background-size: 100% 100%;
+    }
+}
+
+.container {
+    background-color: white;
+    width: 28rem;
+    height: 32rem;
+    box-shadow: 1px 2px 10px 5px blueviolet;
+    position: absolute;
+    top: 6.5rem;
+    left: 52rem;
+    border-radius: 1rem;
+}
+
+.form {
+    padding: 3rem 2rem;
+}
+
+.hd {
+    position: relative;
+    left: 7rem;
+    font-size: 2rem;
+}
+
+.details {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    margin: 0 auto;
+}
+
+.details i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: rgb(163 148 179);
+}
+
+.details input {
+    position: relative;
+    width: 100%;
+    font: inherit;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+.details .bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #333;
+}
+
+.details .bar::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(163 148 179);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.details>input:focus+.bar::before {
+    transform: scaleX(1);
+}
+
+.form_button {
+    display: block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3rem;
+    border: 0.5rem solid #fff;
+    margin: 2.5rem auto 3rem;
+    padding: 0.8rem 2.8rem;
+    background: linear-gradient(to left, rgb(163 148 179), #1d0434);
+    color: #fff;
+    font: inherit
+}
+
+.form_button:hover {
+    background: linear-gradient(to right, rgb(163 148 179), #1d0434);
+}
